@@ -1,16 +1,12 @@
 public class Airplane extends AirTransport {
-    private String airline;
+    private int engines;
 
-    public Airplane(String airline) {
-        super("Airplane", 180, 900, "Jet Fuel");
-        this.airline = airline;
+    public Airplane(String name, int capacity, double maxAltitude, int engines) {
+        super(name, capacity, maxAltitude);
+        this.engines = engines;
     }
 
-    public String getAirline() { return airline; }
-
-    @Override
-    public void move() {
-        System.out.println(getName() + " of " + airline + " is flying with " +
-                getCapacity() + " passengers at " + getSpeed() + " km/h.");
+    public void type() {
+        System.out.println("This is an Airplane with " + engines + " engines.");
     }
 }

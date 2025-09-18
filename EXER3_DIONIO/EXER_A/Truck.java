@@ -1,16 +1,12 @@
-class Truck extends LandTransport {
-    private int loadCapacity; // in tons
+public class Truck extends LandTransport {
+    private double maxLoad;
 
-    public Truck(int loadCapacity) {
-        super("Truck", 3, 120, "Diesel");
-        this.loadCapacity = loadCapacity;
+    public Truck(String name, int capacity, int wheels, double maxLoad) {
+        super(name, capacity, wheels);
+        this.maxLoad = maxLoad;
     }
 
-    public int getLoadCapacity() { return loadCapacity; }
-
-    @Override
-    public void move() {
-        System.out.println(getName() + " carries " + loadCapacity +
-                " tons at " + getSpeed() + " km/h.");
+    public void type() {
+        System.out.println("This is a Truck with max load " + maxLoad + " tons.");
     }
 }

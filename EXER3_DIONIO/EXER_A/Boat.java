@@ -1,16 +1,12 @@
 public class Boat extends WaterTransport {
-    private String type; // fishing, yacht, etc.
+    private String boatType;
 
-    public Boat(String type) {
-        super("Boat", 20, 50, "Diesel");
-        this.type = type;
+    public Boat(String name, int capacity, double maxDepth, String boatType) {
+        super(name, capacity, maxDepth);
+        this.boatType = boatType;
     }
 
-    public String getType() { return type; }
-
-    @Override
-    public void move() {
-        System.out.println(type + " " + getName() + " is sailing with " +
-                getCapacity() + " people at " + getSpeed() + " km/h.");
+    public void type() {
+        System.out.println("This is a " + boatType + " Boat.");
     }
 }

@@ -1,16 +1,12 @@
 public class Helicopter extends AirTransport {
-    private int rotorBlades;
+    private int rotors;
 
-    public Helicopter(int rotorBlades) {
-        super("Helicopter", 5, 250, "Aviation Fuel");
-        this.rotorBlades = rotorBlades;
+    public Helicopter(String name, int capacity, double maxAltitude, int rotors) {
+        super(name, capacity, maxAltitude);
+        this.rotors = rotors;
     }
 
-    public int getRotorBlades() { return rotorBlades; }
-
-    @Override
-    public void move() {
-        System.out.println(getName() + " with " + rotorBlades +
-                " rotor blades is hovering at " + getSpeed() + " km/h.");
+    public void type() {
+        System.out.println("This is a Helicopter with " + rotors + " rotors.");
     }
 }
