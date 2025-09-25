@@ -1,6 +1,6 @@
 public class Person {
-    private String name;
-    private int age;
+    protected String name;
+    protected int age;
 
     public Person() {
         this.name = "";
@@ -10,6 +10,12 @@ public class Person {
     public Person(String name, int age) {
         this.name = name;
         this.age = age;
+    }
+
+    // Method overloading - same name, different parameters
+    public Person(String name) {
+        this.name = name;
+        this.age = 0;
     }
 
     public String getName() {
@@ -26,5 +32,14 @@ public class Person {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    // Method to be overridden (Runtime Polymorphism)
+    public void displayInfo() {
+        System.out.println("Person: " + name + ", Age: " + age);
+    }
+
+    public String getRole() {
+        return "Person";
     }
 }
